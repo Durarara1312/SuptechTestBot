@@ -9,3 +9,6 @@ dp = Dispatcher(bot)
 @dp.message_handler()
 async def on_message(message: types.Message):
     await message.answer(message.text)
+
+
+executor.start_polling(dp, skip_updates=True)
